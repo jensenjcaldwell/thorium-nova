@@ -25,6 +25,7 @@ import { AddCoreCombobox } from "./AddCoreCombobox";
 import { CoreFlexLayout } from "./CoreFlexLayout";
 import { CoreFlexLayoutProvider } from "./CoreFlexLayoutContext";
 import { CoreFlexLayoutDropdown } from "./CoreFlexLayoutDropdown";
+import { DiceWidget } from "./DiceWidget";
 export default function FlightDirectorLayout() {
 	const layoutRef = useRef<Layout>(null);
 	const [focusShipId, setFocusShipId] = useState<number>();
@@ -81,6 +82,7 @@ function CoreMenubar({
 					<CoreFlexLayoutDropdown />
 				</ErrorBoundary>
 				<ShipSelector focusShipId={focusShipId} setFocusShipId={setFocusShipId} />
+				<DiceWidget />
 				<Button className="btn-info btn-outline btn-xs" title="Add New Player Ship">
 					<Icon name="plus" />
 				</Button>
